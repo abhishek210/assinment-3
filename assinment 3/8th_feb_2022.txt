@@ -1,0 +1,78 @@
+Q.1)  Write a method which returns a string by removing special charaters( &,$,:,+,@)
+     spaces from the string  
+     Input: ""Geekster-The%school:where+you@code:your-success$stories""
+     Output : ""eekster The school where you code your success stories
+
+Code-->>
+     public class Remove_Special_Character {
+
+	public static void main(String[] args) {
+		String str = "Geekster-The%school:where+you@code:your-success$stories";
+		str = str.replaceAll("[^a-zA-Z0-9]"," ");
+		System.out.println(str);
+	}
+
+}
+
+
+//*******************************************************************************************//
+   
+Q.2) WAP to prove that intern() method guarantees to return unique String from from a String pool
+
+   public class InternMethod {
+
+	public static void main(String[] args) {
+		String first = "Ajay";
+		String second = new String("Ajay");
+		System.out.println(first==second); // output is given false.
+		String third = second.intern();
+		System.out.println(first==third);
+
+	}
+
+}
+
+//*******************************************************************************************//
+Q.3) Write a method which accepts 10 digits mobile number as an Integer parameter and return a string containing country code with mobile number.
+   Input: 7890765456
+   Output : ""+91-7890765456"";
+
+   public class CountryCode {
+	
+	public static void main(String args[]) {
+		long input = 7890765456L;
+		String CountryCode = "+91-";
+		
+			System.out.println(CountryCode+input);
+		
+		
+	}
+
+}
+   
+//*******************************************************************************************//
+Q.4) Write a method which accepts a String as a parameter and returns ratio of vowels to consonants in String format
+     Input: ""We are Proud to be an India""
+     Output : ""11:10"""
+
+  public class CalculateVowel_and_ConsoRatio {
+
+	public static void main(String[] args) {
+		String str = "We are Proud to be an India";
+		str = str.toLowerCase();
+		int vowelCount =0 , ConsCount=0;
+		for(int i=0; i<str.length(); i++) {
+			if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u'){
+				vowelCount++;
+			}
+			else if(str.charAt(i)>='a' && str.charAt(i)<='z') {
+				ConsCount++;
+			}
+		}
+		System.out.println(vowelCount+":"+ConsCount);
+
+	}
+
+}
+
+//*******************************************************************************************//

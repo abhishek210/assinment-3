@@ -1,0 +1,101 @@
+Q.1) make an array with user inputs of size 10. , then find sum of all elements in array.
+
+    import java.util.Scanner;
+
+    public class SumOfArry {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter array size : ");
+		int size = sc.nextInt();
+		
+		int arr[] = new int[size];
+		arr[0]=10;
+		arr[1]=11;
+		arr[2]=10;
+		arr[3]=156;
+		arr[4]=10;
+		arr[5]=12;
+		arr[6]=10;
+		arr[7]=111;
+		arr[8]=10;
+		arr[9]=17;
+		int sum = 0;
+		for(int i=0; i<arr.length; i++) {
+			sum = sum + arr[i];
+			//System.out.println(sum);
+			
+		}
+		System.out.println(sum);
+
+	}
+
+}
+
+//*******************************************************************************************//
+Q.2)make an array with user inputs of size 10. , then find midle element in an array.
+
+   import java.util.Scanner;
+
+   public class SumOfArry {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter array size : ");//
+		int size = sc.nextInt();
+		
+		int arr[] = new int[size];
+		arr[0] = 10;
+		arr[1] = 11;
+		arr[2] = 11;//negative
+		arr[3] = 156;
+		arr[4] = 10;
+		arr[5] = 12;
+		arr[6] = 45;//negative
+		arr[7] = 111;
+		arr[8] = 10;
+		arr[9] = 17;
+		int start = 0 , last=arr.length-1;
+		int middle = start + (last - start) / 2;
+		System.out.println("Index position is " + middle + " And middle element is = "+arr[middle]);
+		
+	}
+}
+//*******************************************************************************************//
+Q.3)make an array with user inputs of size 10. then print all positive numbers in an array".
+
+   import java.util.Scanner;
+
+public class SumOfArry {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter array size : ");//
+		int size = sc.nextInt();
+		
+		int arr[] = new int[size];
+		arr[0]=10;
+		arr[1]=11;
+		arr[2]=-11;//negative
+		arr[3]=156;
+		arr[4]=10;
+		arr[5]=12;
+		arr[6]=-45;//negative
+		arr[7]=111;
+		arr[8]=10;
+		arr[9]=17;
+		int sum = 0;
+		for(int i=0; i<arr.length; i++) {
+			if(arr[i]>0) {
+				System.out.println("positve Numbers : "+arr[i]); // print Positive Numbers in Array
+			}
+			/*else {
+				System.out.println("Negative Numbers: " +arr[i]); //Also find Negative Numbers 
+			} */
+		}
+	}
+}
+
+
+
+//*******************************************************************************************//

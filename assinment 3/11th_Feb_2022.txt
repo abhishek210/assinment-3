@@ -1,0 +1,60 @@
+Q.1) Max product of two integers.
+
+   public class SumOfArry {
+	
+	public static void main(String args[]) {
+		int arr[] = {1,3,7,20,14};
+		boolean isCheck = Checkarray(arr,5);
+		System.out.println(isCheck);
+		boolean isCheck1 = Checkarray(arr,21);
+		System.out.println(isCheck1);
+	}		
+	public static boolean Checkarray(int [] arr, int target) {
+		boolean isCheck = false;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=i+1; j<arr.length; j++) {
+				if(arr[i] * arr[j] == target) {
+					isCheck = true;
+					break;
+				 
+				}
+				
+			}
+		}
+		return isCheck;
+
+	}
+
+//*****************************************************************************
+Q.2) Check given Array is unique or not.
+
+    public class ArrayIsUnique {
+
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5,6};
+		int arr1[] = {1,1,2,6,6,2,3,4,5,6};
+		System.out.println(checkIfArrayIsUnique(arr));
+		System.out.println(checkIfArrayIsUnique(arr1));
+		
+	}
+	public static boolean checkIfArrayIsUnique(int myArray []) 
+	    {
+	        for (int i = 0; i < myArray.length; i++) 
+	        {
+	            for (int j = 0; j < myArray.length; j++) 
+	            {
+	            
+	                    if (myArray[i] == myArray[j] && (i != j)) 
+	                    {
+	                        return false; // means there are duplicate values
+	                    }
+	                
+	            }
+	        }
+	        return true; // means there are no duplicate value
+
+	}
+}
+//*****************************************************************************
+
+     
